@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <script src="https://kit.fontawesome.com/2746d0af05.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css_tgif_project/loader.css">
+
+</head>
+
+<body>
+
+
+  <header>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img
+            src="https://app-usa-modeast-prod-a01239f.s3.amazonaws.com/Logo_USAGov.png" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" id="linkactive" href="home_data.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Congress 113
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="house_data.html">House</a>
+                <a class="dropdown-item active" href="senate_data.html">Senate</a>
+
+
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Attendence
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="house-attendance-starter-page.html">House</a>
+                <a class="dropdown-item" href="senate-attendance-starter-page.html">Senate</a>
+
+
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Party Lollalty
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="house-party-loyalty-starter-page.html">House</a>
+                <a class="dropdown-item" href="senate-party-loyalty-starter-page.html">Senate</a>
+
+
+              </div>
+            </li>
+
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <i class="fas fa-envelope-open-text"></i>
+            <a class="nav-link" href="mailto:info@tgif.net">info@tgif.net <span class="sr-only">(current)</span></a>
+          </form>
+        </div>
+      </nav>
+
+
+    </div>
+  </header>
+
+
+  <div class="container py-5">
+    <h2>Senators</h2>
+    <p>
+      First convened in 1789, the composition and powers of the Senate are
+      established in Article One of the U.S. Constitution. Each state is
+      represented by two senators, regardless of population, who serve
+      staggered six-year terms. The Senate has several exclusive powers not
+      granted to the House, including consenting to treaties as a precondition
+      to their ratification and consenting to or confirming appointments of
+      Cabinet secretaries, federal judges, other federal executive officials,
+      military officers, regulatory officials, ambassadors, and other federal
+      uniformed officers, as well as trial of federal officials impeached by
+      the House.
+    </p>
+    <div class="container">
+
+      <div class="row py-3">
+
+        <div class="col-9">
+          <div class="form-check form-check-inline">
+            <div class="inline">
+              <p>Filter by Party: </p>
+            </div>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="Checkbox1" value="R">
+            <label class="form-check-label" for="inlineCheckbox1">Republican</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="Checkbox2" value="D">
+            <label class="form-check-label" for="inlineCheckbox2">Democrat</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="Checkbox3" value="I">
+            <label class="form-check-label" for="inlineCheckbox3">Independent</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="form-check form-check-inline">
+            <div class="inline">
+              <p> Filter by state: </p>
+            </div>
+
+
+
+            <select name="states" id="states">
+              <option value="all">All States</option>
+            </select>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <table class="table">
+      <thead>
+        <th>Name</th>
+        <th>Party</th>
+        <th>State</th>
+        <th>Years in Office</th>
+        <th>% Votes w/ Party</th>
+
+      </thead>
+      <tbody id="datosdelsenado"></tbody>
+    </table>
+  </div>
+
+  <div class="loader">
+      <div class="lds-ellipsis" id="loading">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+      </div>
+  </div>
+
+  <div class="container">
+
+    <footer class="page-footer font-small bg-light">
+      <div class="footer-copyright text-center py-3">© 2016 TGIF | All Rights Reserve
+
+      </div>
+
+
+    </footer>
+
+  </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+
+  <script src="./javas_tgif_project/senate_page.js"></script>
+
+</body>
+
+</html>
