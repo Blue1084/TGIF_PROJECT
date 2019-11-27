@@ -32,7 +32,7 @@ fetch("https://api.propublica.org/congress/v1/113/senate/members.json", {
         createsecondtable(statistics.higherpercent);
         createthirdtable(statistics.lowerpercent);
         loader();
-        
+    
 
 
 
